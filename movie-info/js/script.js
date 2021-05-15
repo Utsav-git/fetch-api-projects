@@ -16,7 +16,7 @@ if(searchForm){
 // Functions
 var getMovies = (searchText) => {
     
-   fetch('http://www.omdbapi.com/?apikey=8f532db0&s='+searchText)
+   fetch('https://www.omdbapi.com/?apikey=8f532db0&s='+searchText)
     .then((response) => {
         return response.json();
     })
@@ -53,7 +53,7 @@ var movieSelected = (id) => {
 function getMovie() {
     let movieId = sessionStorage.getItem('movieId');   
 
-    fetch('http://www.omdbapi.com/?apikey=8f532db0&i='+movieId)
+    fetch('https://www.omdbapi.com/?apikey=8f532db0&i='+movieId)
     .then((response) => {
         return response.json();
     })
